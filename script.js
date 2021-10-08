@@ -34,7 +34,55 @@ form.addEventListener("submit", (e) => {
           let dayAfterMaxTemp = data.weather[2].maxtempF
           let dayAfterMinTemp = data.weather[2].mintempF
 
-         
+          // display template literal
+
+        let display = document.querySelector(".display")
+
+        display.innerHTML = 
+                              `<h2>${areaName}</h2>
+                              <div>Area: ${areaName}</div>
+                              <div>Region: ${regionName}</div>
+                              <div>Country: ${countryName}</div>
+                              <div>Currently: Feels Like: ${feelsLike}˚F</div>
+                              
+                              <div class="future-forcast">
+                              <div id="todays-temp">
+                                 
+                              </div>
+          
+                              <div id="tomorrows-temp">
+                                  
+                              </div> 
+          
+                              <div id="day-after-temp">
+                                 
+                              </div>
+                              
+                          </div>`
+
+          // today template
+          let todaysSelector = document.querySelector("#todays-temp")
+          todaysSelector.innerHTML = 
+                                      `<h3>Today</h3>
+                                      <div class="average">Average Temperature: ${todaysAvg}</div>
+                                      <div class="max-temp">Max Temperature: ${todaysMaxTemp}</div>
+                                      <div class="min-temp">Min Temperature: ${todaysMinTemp}</div>`
+          //tomorrow template
+          let tomorrowSelector = document.querySelector("#tomorrows-temp")
+          tomorrowSelector.innerHTML = 
+                                          `<h3>Tomorrow</h3>
+                                          <div class="average">Average Temperature: ${tomorrowAvg}</div>
+                                          <div class="max-temp">Max Temperature: ${tomorrowMaxTemp}</div>
+                                          <div class="min-temp">Min Temperature: ${tomorrowMinTemp}</div>`
+          // day after template
+          let dayAfterSelector = document.querySelector("#day-after-temp")
+          dayAfterSelector.innerHTML = 
+                                          `<h3>Day After</h3>
+                                          <div class="average">Average Temperature: ${dayAfterAvg}</div>
+                                          <div class="max-temp">Max Temperature: ${dayAfterMaxTemp}</div>
+                                          <div class="min-temp">Min Temperature: ${dayAfterMinTemp}</div>`
+
+
                                     
          
         }).catch((err) =>  {
