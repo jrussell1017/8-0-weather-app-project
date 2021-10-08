@@ -86,11 +86,19 @@ form.addEventListener("submit", (e) => {
                                 // recent searches
           // must have area name and current temp
 
-          let recentSelector = document.querySelector(".history")
-              
+          let recent = document.querySelector("#recent")
+          
+          if(recent) recent.remove() 
+          let ul = document.querySelector(".history ul")
+          let li = document.createElement("li")
+
+          li.textContent = `${userInput} - ${feelsLike}°F`
+          ul.append(li)
          
+        
+
         }).catch((err) =>  {
-    
+            console.log(err)
         })
 
 })
