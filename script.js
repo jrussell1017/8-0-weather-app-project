@@ -83,7 +83,11 @@ form.addEventListener("submit", (e) => {
                                           <div class="min-temp">Min Temperature: ${dayAfterMinTemp}</div>`
 
 
-                                    
+                                // recent searches
+          // must have area name and current temp
+
+          let recentSelector = document.querySelector(".history")
+              
          
         }).catch((err) =>  {
     
