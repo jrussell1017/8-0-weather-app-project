@@ -25,6 +25,11 @@ function getWeatherData(city, shouldIAddToRecents) {
     })
     .then((data) => {
       console.log(data);
+      let removeStaticBox = document.querySelector("#static-box")
+      removeStaticBox.remove()
+      
+      //set fetched data to variables
+      
       // display
       let areaName = data.nearest_area[0].areaName[0].value;
       let regionName = data.nearest_area[0].region[0].value;

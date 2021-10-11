@@ -30,6 +30,13 @@
     line-height: 175%;
 }
 
+#static-box {
+    border: 1px solid cadetblue;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 25px;
+}
+
 #color-container {
     border: 1px solid cadetblue;
     background-color: lightgrey;
