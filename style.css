@@ -25,9 +25,13 @@
 
 .display {
     grid-area: display;
-    border: 1px solid cadetblue;
     text-align: center;
     padding-top: 25px;
+    line-height: 175%;
+}
+
+#color-container {
+    border: 1px solid cadetblue;
     background-color: lightgrey;
 }
 
