@@ -1,4 +1,4 @@
-// selects for
+// selects form
 let form = document.querySelector("form#weather-input");
 
 // adds event listener to for on submit
@@ -25,9 +25,10 @@ function getWeatherData(city, shouldIAddToRecents) {
     })
     .then((data) => {
       console.log(data);
+      // selects and removes boxed static message
       let removeStaticBox = document.querySelector("#static-box")
       removeStaticBox.remove()
-      
+
       //set fetched data to variables
       
       // display
