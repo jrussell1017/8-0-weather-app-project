@@ -27,7 +27,8 @@ function getWeatherData(city, shouldIAddToRecents) {
       console.log(data);
       // selects and removes boxed static message
       let removeStaticBox = document.querySelector("#static-box")
-      removeStaticBox.remove()
+      
+      if(removeStaticBox) removeStaticBox.remove();
 
       //set fetched data to variables
       
